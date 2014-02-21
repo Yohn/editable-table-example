@@ -36,7 +36,10 @@
 		<script type="text/javascript">
 		$(document).ready(function(){
 			$("td").click(function(){
-				$(this)[0].innerHTML = "This cell was clicked.";
+				var newData = prompt("Please enter the new data:");
+
+				$(this)[0].innerHTML = newData;
+
 				console.log("clicked a cell");
 				console.log($(this));
 			});
