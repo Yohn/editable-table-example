@@ -1,4 +1,4 @@
-editable-form-example
+editable-table-example
 =====================
 
-An example of an HTML form you can edit live in your browser
+An example of an HTML table you can edit live in your browser
