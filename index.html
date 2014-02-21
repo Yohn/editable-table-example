@@ -15,14 +15,6 @@
 		</style>
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-		<script type="text/javascript">
-		$(document).ready(function(){
-			$("td").click(function(){
-				alert("A cell was clicked.");
-			});
-		});
-		</script>
 	</head>
 
 	<body>
@@ -40,6 +32,16 @@
 				<td>Click here to edit</td>
 			</tr>
 		</table>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("td").click(function(){
+				$(this)[0].innerHTML = "This cell was clicked.";
+				console.log("clicked a cell");
+				console.log($(this));
+			});
+		});
+		</script>
 	</body>
 
 <html>
