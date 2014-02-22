@@ -13,6 +13,11 @@
 			min-height: 20px;
 		}
 
+		table.low-padding > * > * > *
+		{
+			padding: 2px;
+		}
+
 		.bordered > * > * > * > *
 		{
 			border: 1px solid black;
@@ -30,7 +35,7 @@
 	<body>
 		<div id="page-wrap" style="width: 800px; margin: 0 auto">
 			<div class="unbordered">
-				<table id="company-info">
+				<table class="low-padding" id="company-info">
 					<tr><td style="font-size: 20">Company Name</td></tr>
 					<tr><td>Street address</td></tr>
 					<tr><td>City, ST 00000</td></tr>
