@@ -32,6 +32,29 @@
 		{
 			padding-top: 15px;
 		}
+
+		.box
+		{
+			display: box;
+			display: -webkit-box;
+			display: -moz-box;
+
+			width: 100%;
+		}
+
+		#bill-to-box
+		{
+			box-flex: 1;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+		}
+
+		#ship-to-box
+		{
+			box-flex: 1;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+		}
 		</style>
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -48,8 +71,8 @@
 				</table>
 			</div>
 
-			<div>
-				<div class="unbordered" style="display: inline-block">
+			<div class="box">
+				<div class="unbordered" id="bill-to-box">
 					<table class="low-padding" id="bill-to">
 						<tr><th>Bill to:</th></tr>
 						<tr><td>Name</td></tr>
@@ -58,7 +81,7 @@
 					</table>
 				</div>
 
-				<div class="unbordered" style="display: inline-block; position: absolute; left: 50%">
+				<div class="unbordered" id="ship-to-box">
 					<table class="low-padding" id="ship-to">
 						<tr><th>Ship to:</th></tr>
 						<tr><td>Name</td></tr>
