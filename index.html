@@ -4,13 +4,14 @@
 		<style type="text/css">
 		table, th, td
 		{
-			border: 1px solid black;
 			border-collapse: collapse;
 		}
 
 		th, td
 		{
+			border: 1px solid black;
 			padding: 10px;
+			min-height: 20px;
 		}
 		</style>
 
@@ -18,23 +19,54 @@
 	</head>
 
 	<body>
-		<table style="width: 300px; margin: 0 auto">
-			<tr>
-				<td>Click here to edit</td>
-				<td>Click here to edit</td>
-			</tr>
-			<tr>
-				<td>Click here to edit</td>
-				<td>Click here to edit</td>
-			</tr>
-			<tr>
-				<td>Click here to edit</td>
-				<td>Click here to edit</td>
-			</tr>
-		</table>
+		<div id="page-wrap">
+			<table id="products" style="width: 800px; margin: 0 auto">
+				<tr>
+					<th>ID</th>
+					<th>Description</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Total</th>
+				</tr>
+
+				<tr>
+					<td rowspan="4" colspan="3" style="border: none"></td>
+					<td>Subtotal</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>Shipping</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>Taxes</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><b>Total</b></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
 
 		<script type="text/javascript">
 		$(document).ready(function(){
+			var productTable = document.getElementById("products");
+
+			var productRows = prompt("How many products on the invoice?");
+
+			for (var i = productRows - 1; i >= 0; i--) {
+				var row = productTable.insertRow(1);
+
+				for (var j = productTable.rows[0].cells.length - 1; j >= 0; j--) {
+					row.insertCell(0);
+				};
+			};
+
 			$("td").click(function(){
 				var newData = prompt("Please enter the new data:");
 
